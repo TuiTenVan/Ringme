@@ -1,7 +1,7 @@
 package String;
 
 import java.util.Scanner;
-public class Bai3 {
+public class Bai5 {
     public static String ChuanHoa(String s){
         StringBuilder sb = new StringBuilder();
         sb.append(Character.toUpperCase(s.charAt(0)));
@@ -10,15 +10,15 @@ public class Bai3 {
         }
         return sb.toString();
     }
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine().toLowerCase();
         String[] words = s.split("\\s+");
-        String tmp = "";
-        for(String word : words){
-            tmp += ChuanHoa(word) + " ";
+        StringBuilder sb = new StringBuilder();
+        sb.append(ChuanHoa(words[words.length - 1]) + " ");
+        for(int i = 0; i < words.length - 1; i++){
+            sb.append(ChuanHoa(words[i]) + " ");
         }
-        System.out.println(tmp.substring(0, tmp.length() - 1));
+        System.out.println(sb);
     }
 }
