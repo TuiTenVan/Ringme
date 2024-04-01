@@ -74,11 +74,11 @@ class BusManagementSystem {
         Driver selectedDriver = drivers.stream().filter(d -> d.getMaLX().equals(driverId)).findFirst().orElse(null);
         Route selectedRoute = routes.stream().filter(r -> r.getMaTuyen().equals(routeId)).findFirst().orElse(null);
         if (selectedDriver != null && selectedRoute != null) {
-            Pair<Driver, Route> newPair = new Pair<>(selectedDriver, selectedRoute); // Tạo cặp mới
-            if (!assignedPairs.contains(newPair)) { // Kiểm tra xem cặp đã tồn tại trong Set chưa
+            Pair<Driver, Route> newPair = new Pair<>(selectedDriver, selectedRoute);
+            if (!assignedPairs.contains(newPair)) {
                 Assignment newAssignment = new Assignment(selectedDriver, selectedRoute, numberOfTrips);
                 assignments.add(newAssignment);
-                assignedPairs.add(newPair); // Thêm cặp vào Set
+                assignedPairs.add(newPair);
                 System.out.println("Driver assigned to route successfully.");
             } else {
                 System.out.println("This assignment already exists.");
