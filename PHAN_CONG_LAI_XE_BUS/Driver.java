@@ -1,6 +1,8 @@
 package PHAN_CONG_LAI_XE_BUS;
 
-public class Driver {
+import java.io.Serializable;
+
+public class Driver implements Serializable {
     private static int i = 1;
     private String maLX;
     private String name;

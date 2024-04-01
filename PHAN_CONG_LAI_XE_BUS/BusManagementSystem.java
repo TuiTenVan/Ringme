@@ -136,5 +136,17 @@ class BusManagementSystem {
             System.out.println(assignment);
         }
     }
+
+    public List<Driver> getDrivers() {
+        return drivers;
+    }
+
+    public List<Route> getRoutes() {
+        return routes;
+    }
+
+    public List<Assignment> getAssignments() {
+        return assignments;
+    }
 }
 

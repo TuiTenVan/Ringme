@@ -1,6 +1,8 @@
 package PHAN_CONG_LAI_XE_BUS;
 
-public class Route {
+import java.io.Serializable;
+
+public class Route implements Serializable {
     private static int i = 1;
     private String maTuyen;
     private double distance;

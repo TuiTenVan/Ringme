@@ -23,14 +23,17 @@ public class Main {
                 case 1:
                     system.addDriver();
                     system.printDrivers();
+                    DataWriter.writeDrivers(system.getDrivers(), "drivers.txt");
                     break;
                 case 2:
                     system.addRoute();
                     system.printRoutes();
+                    DataWriter.writeRoutes(system.getRoutes(), "routes.txt");
                     break;
                 case 3:
                     system.assignDriverToRoute();
                     system.printAssignments();
+                    DataWriter.writeAssignments(system.getAssignments(), "assignments.txt");
                     break;
                 case 4:
                     system.sortAssignmentsByName();
@@ -50,5 +53,6 @@ public class Main {
         }
     }
 }
+
 
 

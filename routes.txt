@@ -1,0 +1,2 @@
+Route{ Ma tuyen = 001, distance = 10.0km, numberOfStops = 4}
+Route{ Ma tuyen = 002, distance = 20.0km, numberOfStops = 4}

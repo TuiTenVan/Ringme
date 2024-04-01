@@ -1,6 +1,8 @@
 package PHAN_CONG_LAI_XE_BUS;
 
-public class Assignment {
+import java.io.Serializable;
+
+public class Assignment implements Serializable {
     private Driver driver;
     private Route route;
     private int numberOfTrips;
