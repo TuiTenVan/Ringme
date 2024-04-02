@@ -1,4 +1,4 @@
-package PHAN_CONG_LAI_XE_BUS;
+package JDBC_Hibernate;
 
 import java.util.*;
 
@@ -8,7 +8,6 @@ public class BusManagementSystem {
     private List<Assignment> assignments;
     private Set<Pair<Driver, Route>> assignedPairs;
     private Scanner sc;
-
     public BusManagementSystem() {
         drivers = new ArrayList<>();
         routes = new ArrayList<>();
@@ -37,7 +36,6 @@ public class BusManagementSystem {
             System.out.println("Driver added successfully: " + driver);
         }
     }
-
     public void addRoute() {
         System.out.print("Enter number of routes to add: ");
         int numRoutes = sc.nextInt();
@@ -149,4 +147,3 @@ public class BusManagementSystem {
         return assignments;
     }
 }
-
