@@ -1,2 +1,0 @@
-001, Giai tich, 3, abc
-002, He dieu hanh, 2, xyz

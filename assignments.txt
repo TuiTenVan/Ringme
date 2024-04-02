@@ -1,4 +1,0 @@
-Assignment{ driver = Nguyen Viet Van, route = 001, numberOfTrips = 2}
-Assignment{ driver = Nguyen Viet Van, route = 002, numberOfTrips = 5}
-Assignment{ driver = Hoang Dinh Hiep, route = 001, numberOfTrips = 1}
-Assignment{ driver = Hoang Dinh Hiep, route = 002, numberOfTrips = 5}
