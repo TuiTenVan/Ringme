@@ -128,13 +128,16 @@ use quanlysinhvien;
 	-- 13
 	SELECT 
 		student.id AS 'Mã sinh viên',
+        student.name AS 'Họ tên',
 		student.gender AS 'Giới tính',
-		exam_management.mark AS 'Điểm trung bình lần 1'
+		AVG(exam_management.mark) AS 'Điểm trung bình lần 1'
 	FROM student
 	JOIN exam_management ON student.id = exam_management.student_id
 	WHERE student.gender = 'Nam' 
-	AND exam_management.number_of_exam_taking = 1 
-	AND exam_management.mark > 7.0;
+		AND exam_management.number_of_exam_taking = 1 
+	GROUP BY student.id
+	HAVING AVG(exam_management.mark) > 7.0;
+
     
 	-- 14
 	SELECT student_id, COUNT(*) AS 'Số môn rớt'
