@@ -1,0 +1,119 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header .container{
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.header .container .item{
+    margin-right: 30px;
+}
+.header .container .header-left{
+    margin-left: 130px;
+}
+.header .container .header-right{
+    margin-right: 100px;
+}
+
+.header .background {
+    background-image: url('/HTML_CSS/assets/images/lodging.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    height: 550px;
+    padding: 20px;
+    max-width: 100%;
+}    
+.header .background h1{
+    position: absolute;
+    left: 100px;
+    top: 220px;
+    font-size: 40px;
+}
+.header .background p{
+    position: absolute;
+    left: 100px;
+    top: 270px;
+    font-size: 25px;
+}
+
+
+.main{
+    padding-bottom: 40px;
+    background-color: #E4E4E4;
+}
+
+.main .title{
+    display: flex;
+    flex-direction: column;
+    flex: 1 100%; 
+    margin-bottom: 30px; 
+    padding-top: 40px;
+    margin-left: 6%;
+}
+
+.main .title p{
+    margin-top: 10px;
+    color: #968c8c;
+}
+.container-img {
+    display: flex;
+    justify-content: center;
+}
+
+.column {
+    /* flex: 1; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+    padding: 10px;
+}
+
+
+.image {
+    margin-bottom: 20px; 
+  }
+.image img {
+    width: 400px; 
+    height: auto;
+    max-width: 100%; 
+    max-height: 400px
+  }
+
+.footer {
+    padding: 20px 40px 30px 40px;
+    display: flex;
+    background-color: #e4dede;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28%;
+    margin-left: 4%;
+}
+
+.section h2 {
+    margin-bottom: 20px;
+}
+
+.section p {
+    margin-bottom: 20px;
+    color: #968c8c;
+}
+
+
+
+
