@@ -4,10 +4,13 @@ import com.example.Restful.DTO.StudentDTO;
 import com.example.Restful.Service.IStudentService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
@@ -30,8 +33,6 @@ public class StudentController {
         }
     }
 
-
-
     @DeleteMapping(value="/student/{id}")
     public ResponseEntity<String> deleteStudent(@PathVariable Integer id) {
         try {
@@ -51,7 +52,10 @@ public class StudentController {
         try {
             logger.info("Retrieving students with birthday today");
             List<StudentDTO> students = studentService.getStudentsWithBirthdayToday();
-            return students;
+            if (students != null){
+                return students;
+            }
+            return null;
         } catch (Exception e) {
             logger.error("Error occurred while retrieving students with birthday today", e);
             throw e;
@@ -71,5 +75,4 @@ public class StudentController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Failed to fetch students: " + e.getMessage());
         }
     }
-
 }
