@@ -1004,3 +1004,4 @@ java.lang.NullPointerException: Cannot invoke "Object.toString()" because the re
 2024-04-11 17:34:15 INFO  StudentController:49 - Deleting student with ID
 2024-04-11 17:34:35 INFO  StudentController:37 - Adding student
 >>>>>>> b4b34d0db3eebbe18b9d5800d09e9979e63ef41a
+2024-04-12 10:53:57 INFO  StudentController:80 - Retrieving all students with search
