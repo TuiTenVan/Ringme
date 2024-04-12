@@ -36,9 +36,7 @@ public class StudentEntity {
     @ManyToOne
     @JoinColumn(name="major_id")
     private MajorEntity major;
-
-//    @ManyToMany(mappedBy = "students",fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-//    private List<ClassEntity> classList = new ArrayList<>();
+    
     @OneToMany(mappedBy = "student", cascade = {CascadeType.PERSIST, CascadeType.REMOVE, CascadeType.MERGE}, orphanRemoval = true)
     private List<StudentClassEntity> studentClasses = new ArrayList<>();
 }

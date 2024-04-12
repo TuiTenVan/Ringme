@@ -6,8 +6,12 @@ import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -19,7 +23,15 @@ public class StudentController {
     private IStudentService studentService;
 
     @PostMapping("/students")
-    public ResponseEntity<?> addStudent(@RequestBody StudentDTO studentDTO) {
+    public ResponseEntity<?> addStudent(@Valid @RequestBody StudentDTO studentDTO, BindingResult result) {
+        if (result.hasErrors()) {
+            Map<String, String> errors = new HashMap<>();
+            for (FieldError error : result.getFieldErrors()) {
+                errors.put(error.getField(), error.getDefaultMessage());
+            }
+            return ResponseEntity.badRequest().body(errors);
+        }
+
         try {
             studentService.save(studentDTO);
             logger.info("Adding student");
@@ -37,7 +49,7 @@ public class StudentController {
         try {
             studentService.deleteStudent(id);
             logger.info("Deleting student with ID");
-            return ResponseEntity.ok("Deleting student with ID");
+            return ResponseEntity.ok("Deleting student successfully!");
         } catch (Exception e) {
             logger.error("Error occurred while deleting student with ID", e);
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error occurred while deleting student with ID");
