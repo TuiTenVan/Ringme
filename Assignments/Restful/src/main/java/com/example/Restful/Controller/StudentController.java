@@ -4,20 +4,14 @@ import com.example.Restful.DTO.StudentDTO;
 import com.example.Restful.Service.IStudentService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
 
-<<<<<<< HEAD
 import javax.validation.Valid;
 import java.util.HashMap;
-=======
-import java.util.Collections;
->>>>>>> b4b34d0db3eebbe18b9d5800d09e9979e63ef41a
 import java.util.List;
 import java.util.Map;
 
