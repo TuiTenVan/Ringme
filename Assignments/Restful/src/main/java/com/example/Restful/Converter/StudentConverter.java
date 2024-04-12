@@ -14,6 +14,7 @@ import java.util.List;
 public class StudentConverter{
     @Autowired
     private ModelMapper modelMapper;
+
     public StudentDTO toStudentDTO(StudentEntity item) {
         StudentDTO studentDTO = modelMapper.map(item, StudentDTO.class);
         List<StudentClassEntity> studentClassEntities = item.getStudentClasses();
