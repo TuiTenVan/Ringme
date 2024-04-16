@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản lý sinh viên</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+</head>
+
+<body>
+    <div class="frame">
+        <h1 style="text-align: center">Student Form</h1>
+
+        <div class="container">
+            <form id="student-form">
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required maxlength="50" />
+                </div>
+                <div>
+                    <label for="birthday">Birthday</label>
+                    <input type="date" id="birthday" name="birthday" required />
+                </div>
+                <div>
+                    <label for="mobilePhone">Mobile phone</label>
+                    <input type="tel" id="mobilePhone" name="mobilePhone" pattern="[0-9]{10}" required />
+                </div>
+                <div>
+                    <label for="hometown">Hometown</label>
+                    <input type="text" id="hometown" name="hometown" />
+                </div>
+                <button type="submit" id="save-btn">Save</button>
+                <button type="reset">Reset</button>
+            </form>
+        </div>
+    </div>
+    <div class="frame">
+        <h1 style="text-align: center">Danh sách sinh viên</h1>
+        <table id="student-table">
+            <thead>
+                <tr>
+                    <th>
+                        <input type="checkbox" class="student-checkbox" id="checkAll" />
+                    </th>
+                    <th>Họ và tên</th>
+                    <th>Ngày sinh</th>
+                    <th>Số điện thoại</th>
+                    <th>Quê quán</th>
+                </tr>
+            </thead>
+            <tbody id="student-list">
+            </tbody>
+        </table>
+        <div class="button">
+            <button type="submit" id="delete-btn" disabled>Delete</button>
+            <button type="submit" id="edit-btn" disabled>Edit</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./assets/main.js"></script>
+</body>
+
+</html>
