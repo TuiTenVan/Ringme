@@ -1,0 +1,40 @@
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+}
+
+/* .ant-menu {
+    background-color: #;
+    color: #000;
+}
+
+
+.ant-menu-item:hover {
+    background-color: #417aa5;
+} */
+
+.logo a {
+    color: #000;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav-menu {
+    flex-grow: 1;
+    margin-left: 20px;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.login-button,
+.signup-button {
+    font-size: 1em;
+}

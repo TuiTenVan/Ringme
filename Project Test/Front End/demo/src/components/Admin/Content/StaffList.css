@@ -1,0 +1,78 @@
+.list--header{
+    display: flex;
+    margin: 2rem 0;
+    justify-content: space-between
+}
+
+.list--header h2{
+    margin-top: 50px;
+    color: #526d82;
+}
+
+.list--header select{
+    border-radius: 10px;
+    border: none;
+    padding: 8px 12px;
+    border: 1px solid #dde6ed;
+    color: #526d82;
+}
+
+.list--container{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.list{
+    display: flex;
+    padding-right: 10px;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.3s ease-in-out;
+}
+.staff--detail{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #526d82;
+}
+
+.staff--detail img{
+    width: 50px;
+    background: #dde6ed;
+    border-radius: 50%;
+}
+
+.list:hover{
+    background: #dde6ed;
+    border-radius: 10px;
+}
+.staff-table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .staff-table th, .staff-table td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  .staff-table th {
+    background-color: #dde6ed;
+  }
+  .staff-table th, .staff-table td {
+    border: 1px solid #dddddd;
+    text-align: center; /* Căn giữa nội dung */
+    padding: 8px;
+  }
+  .align-center {
+    text-align: center;
+  }
+  
+  .list--header {
+    margin-bottom: 20px; 
+  }
+  
+  
+  

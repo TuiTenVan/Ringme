@@ -1,0 +1,32 @@
+.signup-box {
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+}
+
+.signup-box h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.para-2 {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.register-button {
+  width: 100%; /* Make the button fill the container */
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center the content horizontally */
+}
+
+.para-2 a {
+  color: #1890ff;
+}

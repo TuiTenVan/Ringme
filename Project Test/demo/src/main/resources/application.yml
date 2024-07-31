@@ -1,0 +1,23 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: demo
+  datasource:
+    url: jdbc:mysql://localhost:3306/restaurant_manager
+    username: root
+    password: 123456
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+      dialect: org.hibernate.dialect.MySQL8Dialect
+      enable_lazy_load_no_trans: true
+  web:
+    resources:
+      static-locations: classpath:/static/
+jwt:
+  expiration: 2592000 #30*24*60*60
+  secretKey: 9Nww4969nZlkcX3HoG7SzN4hUvOaN7nNgB2D9J+xHZk=
+
